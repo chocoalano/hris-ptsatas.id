@@ -26,14 +26,17 @@ class ProjectStatsOverview extends BaseWidget
         Stat::make('Total Project Compleate', $pclear)
             ->description('From total projects '.$ptotal)
             ->descriptionIcon('heroicon-m-rectangle-stack')
-            ->color('success'),
+            ->color('success')
+            ->chart([5,4,5,6,7,6,4,3,3,2,]),
         Stat::make('Total Project Uncompleate', $punclear)
             ->description('From total projects '.$puntotal)
             ->descriptionIcon('heroicon-m-rectangle-stack')
-            ->color('danger'),
+            ->color('danger')
+            ->chart([5,4,5,6,7,6,4,3,3,2,]),
         Stat::make('Total Customers', $custtotal)
             ->descriptionIcon('heroicon-m-arrow-trending-up')
-            ->color('success'),
+            ->color('success')
+            ->chart([5,4,5,6,7,6,4,3,3,2,]),
         ];
     }
 }

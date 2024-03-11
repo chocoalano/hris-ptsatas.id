@@ -1,133 +1,931 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  
+<!-- Mirrored from silicon.createx.studio/landing-saas-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Aug 2022 19:37:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Silicon | SaaS Landing v.1</title>
 
-        <title>Laravel</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('compro/assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('compro/assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('compro/assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('compro/assets/favicon/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('compro/assets/favicon/safari-pinned-tab.svg') }}" color="#6366f1">
+    <link rel="shortcut icon" href="{{ asset('compro/assets/favicon/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="{{ asset('compro/assets/favicon/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="{{ asset('compro/assets/vendor/boxicons/css/boxicons.min.css') }}"/>
+    <link rel="stylesheet" media="screen" href="{{ asset('compro/assets/vendor/swiper/swiper-bundle.min.css') }}"/>
+    <link rel="stylesheet" media="screen" href="{{ asset('compro/assets/vendor/img-comparison-slider/dist/styles.css') }}"/>
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="{{ asset('compro/assets/css/theme.min.css') }}"/>
 
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WKV3GT5');
+    </script>
+  </head>
 
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
+  <!-- Body -->
+  <body>
+    
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
 
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-left">
-                        &nbsp;
-                    </div>
-
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="{{ asset('compro/assets/img/logo.svg') }}" width="47" alt="Silicon">
+            Silicon
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+            <div class="offcanvas-header border-bottom border-light">
+              <h5 class="offcanvas-title text-white">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
+                  <div class="dropdown-menu dropdown-menu-dark p-0">
+                    <div class="d-lg-flex">
+                      <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0" style="background-image: url(assets/img/landings.jpg); margin: -1px;"></div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
+                          <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
+                          <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
+                          <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
+                          <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
+                          <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
+                          <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
+                          <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
+                          <li><a href="landing-software-company.html" class="dropdown-item">IT (Software) Company</a></li>
+                          <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
+                          <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
+                          <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu dropdown-menu-dark">
+                    <div class="d-lg-flex pt-lg-3">
+                      <div class="mega-dropdown-column">
+                        <h6 class="text-light px-3 mb-2">About</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
+                          <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
+                        </ul>
+                        <h6 class="text-light px-3 mb-2">Blog</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
+                          <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
+                          <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
+                          <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                          <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                          <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                          <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="text-light px-3 mb-2">Portfolio</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                          <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                          <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                          <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                          <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                          <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                        </ul>
+                        <h6 class="text-light px-3 mb-2">Services</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
+                          <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
+                          <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
+                          <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="text-light px-3 mb-2">Pricing</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
+                        </ul>
+                        <h6 class="text-light px-3 mb-2">Contacts</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                          <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                          <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
+                        </ul>
+                        <h6 class="text-light px-3 mb-2">Specialty</h6>
+                        <ul class="list-unstyled">
+                          <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                          <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
+                    <li><a href="account-security.html" class="dropdown-item">Security</a></li>
+                    <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
+                    <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
+                    <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
+                    <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
+                    <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
+                    <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
+                    <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="components/typography.html" class="nav-link">UI Kit</a>
+                </li>
+                <li class="nav-item">
+                  <a href="docs/getting-started.html" class="nav-link">Docs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top border-light">
+              <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div>      
+          </div>
+          <div class="dark-mode pe-lg-1 ms-auto me-4">
+            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+              <input type="checkbox" class="form-check-input" id="theme-mode">
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-5 lh-1 me-1"></i>
+            &nbsp;Buy now
+          </a>
         </div>
-    </body>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative overflow-hidden">
+        <div class="position-relative bg-dark zindex-4 pt-lg-3 pt-xl-5">
+  
+          <!-- Text -->
+          <div class="container zindex-5 pt-5">
+            <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
+              <div class="col-xl-8 col-lg-9 col-md-10 py-5">
+                <h1 class="display-4 text-light pt-sm-2 pb-1 pb-sm-3 mb-3">Task Management Assistant You Gonna Love</h1>
+                <p class="fs-lg text-light opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">We offer you a new generation of task and project management system. Plan, manage and track all your tasks in one flexible software!</p>
+                <a href="#" class="btn btn-primary shadow-primary btn-lg">Get early access</a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Bottom shape -->
+          <div class="d-flex position-absolute top-100 start-0 w-100 overflow-hidden mt-n4 mt-sm-n1" style="color: var(--si-gray-900);">
+            <div class="position-relative start-50 translate-middle-x flex-shrink-0" style="width: 3788px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="3788" height="144" viewBox="0 0 3788 144"><path fill="currentColor" d="M0,0h3788.7c-525,90.2-1181.7,143.9-1894.3,143.9S525,90.2,0,0z"/></svg>
+            </div>
+          </div>
+          <div class="d-none d-lg-block" style="height: 300px;"></div>
+          <div class="d-none d-md-block d-lg-none" style="height: 150px;"></div>
+        </div>
+        <div class="position-relative zindex-5 mx-auto" style="max-width: 1250px; transform: translateZ(-100px);">
+          <div class="d-none d-lg-block" style="margin-top: -300px;"></div>
+          <div class="d-none d-md-block d-lg-none" style="margin-top: -150px;"></div>
+            
+          <!-- Parallax (3D Tilt) gfx -->
+          <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="12" data-tilt-perspective="1200">
+            <img src="{{ asset('compro/assets/img/landing/saas-2/hero/layer01.png') }}" alt="Dashboard">
+            <div class="tilt-3d-inner position-absolute top-0 start-0 w-100 h-100">
+              <img src="{{ asset('compro/assets/img/landing/saas-2/hero/layer02.png') }}" alt="Cards">
+            </div>
+          </div>
+        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></div>
+      </section>
+      
+
+      <!-- Features -->
+      <section class="position-relative py-5">
+        <div class="container position-relative zindex-5 pb-md-4 pt-md-2 pt-lg-3 pb-lg-5">
+          <div class="row justify-content-center text-center pb-3 mb-sm-2 mb-lg-3">
+            <div class="col-xl-6 col-lg-7 col-md-9">
+              <h2 class="h1 mb-lg-4">What Do You Get with Our Tool?</h2>
+              <p class="fs-lg text-muted mb-0">Make sure all your tasks are organized so you can set the priorities and focus on important.</p>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0 pb-xl-3">
+
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/comments.svg') }}" width="40" alt="Comments">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Comments on Tasks</h3>
+                  <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                </div>
+              </div>
+              <hr class="position-absolute top-0 end-0 w-1 h-100 d-none d-sm-block">
+              <hr class="position-absolute top-100 start-0 w-100 d-none d-sm-block">
+            </div>
+
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/analytics.svg') }}" width="40" alt="Analytics">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Tasks Analytics</h3>
+                  <p class="mb-0">Non imperdiet facilisis nulla tellus Morbi scelerisque eget adipiscing vulputate.</p>
+                </div>
+              </div>
+              <hr class="position-absolute top-0 end-0 w-1 h-100 d-none d-md-block">
+              <hr class="position-absolute top-100 start-0 w-100 d-none d-sm-block">
+            </div>
+
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/group.svg') }}" width="40" alt="Group">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Multiple Assignees</h3>
+                  <p class="mb-0">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                </div>
+              </div>
+              <hr class="position-absolute top-0 end-0 w-1 h-100 d-none d-sm-block d-md-none">
+              <hr class="position-absolute top-100 start-0 w-100 d-none d-sm-block">
+            </div>
+
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/notifications.svg') }}" width="40" alt="Notifications">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Notifications</h3>
+                  <p class="mb-0">Diam, suspendisse velit cras ac. Lobortis diam volutpat, eget pellentesque viverra.</p>
+                </div>
+              </div>
+              <hr class="position-absolute top-0 end-0 w-1 h-100 d-none d-md-block">
+              <hr class="position-absolute top-100 start-0 w-100 d-none d-sm-block d-md-none">
+            </div>
+            
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/tasks.svg') }}" width="40" alt="Tasks">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Sections &amp; Subtasks</h3>
+                  <p class="mb-0">Mi feugiat hac id in. Sit elit placerat lacus nibh lorem ridiculus lectus.</p>
+                </div>
+              </div>
+              <hr class="position-absolute top-0 end-0 w-1 h-100 d-none d-sm-block">
+            </div>
+
+            <!-- Item -->
+            <div class="col position-relative">
+              <div class="card border-0 bg-transparent rounded-0 p-md-1 p-xl-3">
+                <div class="d-table bg-secondary rounded-3 p-3 mx-auto mt-3 mt-md-4">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/features/security.svg') }}" width="40" alt="Security">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 pb-1 mb-2">Data Security</h3>
+                  <p class="mb-0">Aliquam malesuada neque eget elit nulla vestibulum nunc cras.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></div>
+      </section>
+
+
+      <!-- Light / Dark mode (Comparison slider) -->
+      <section class="d-flex w-100 position-relative overflow-hidden">
+        <div class="position-relative flex-xl-shrink-0 zindex-5 start-50 translate-middle-x" style="max-width: 1920px;">
+          <div class="mx-md-n5 mx-xl-0">
+            <div class="mx-n4 mx-sm-n5 mx-xl-0">
+              <div class="mx-n5 mx-xl-0">
+                <img-comparison-slider class="mx-n5 mx-xl-0">
+                  <img slot="first" src="{{ asset('compro/assets/img/landing/saas-2/dark-mode.jpg') }}" alt="Dak Mode">
+                  <img slot="second" src="{{ asset('compro/assets/img/landing/saas-2/light-mode.jpg') }}" alt="Light Mode">
+                  <div slot="handle">
+                    <svg class="text-primary shadow-primary rounded-circle" width="36" height="36" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36"><g><circle fill="currentColor" cx="18" cy="18" r="18"/></g><path fill="#fff" d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z"/></svg>
+                  </div>
+                </img-comparison-slider>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-absolute top-0 start-0 w-50 h-100 bg-dark"></div>
+        <div class="position-absolute top-0 end-0 w-50 h-100" style="background-color: #f3f6ff;"></div>
+      </section>
+
+
+      <!-- Testimonials -->
+      <section class="container py-5 my-2 my-md-4 my-lg-5">
+        <div class="row pt-2 py-xl-3">
+          <div class="col-lg-3 col-md-4">
+            <h2 class="h1 text-center text-md-start mx-auto mx-md-0 pt-md-2" style="max-width: 300px;">What <br class="d-none d-md-inline">People Say <br class="d-none d-md-inline">About App:</h2>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-md-start pb-4 mb-2 pt-2 pt-md-4 mt-md-5">
+              <button type="button" id="prev-testimonial" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-testimonial" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8">
+            <div class="swiper mx-n2" data-swiper-options='{
+              "slidesPerView": 1,
+              "spaceBetween": 8,
+              "loop": true,
+              "navigation": {
+                "prevEl": "#prev-testimonial",
+                "nextEl": "#next-testimonial"
+              },
+              "breakpoints": {
+                "500": {
+                  "slidesPerView": 2
+                },
+                "1000": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="{{ asset('compro/assets/img/avatar/16.jpg') }}" width="48" class="rounded-circle" alt="Robert Fox">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
+                        <span class="fs-xs text-muted">Founder of Lorem Company</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum. Orci varius natoque penatibus et magnis dis parturient montes commodo.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="{{ asset('compro/assets/img/avatar/08.jpg') }}" width="48" class="rounded-circle" alt="Annette Black">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
+                        <span class="fs-xs text-muted">CEO of Ipsum Company</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum odio, bibendum ornare mi at, efficitur urna.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="{{ asset('compro/assets/img/avatar/13.jpg') }}" width="48" class="rounded-circle" alt="Jerome Bell">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
+                        <span class="fs-xs text-muted">Founder of the Agency </span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="{{ asset('compro/assets/img/avatar/09.jpg') }}" width="48" class="rounded-circle" alt="Albert Flores">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
+                        <span class="fs-xs text-muted">CEO of Dolor Ltd.</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- App download CTA -->
+      <section class="container">
+        <div class="bg-secondary rounded-3 overflow-hidden py-5 px-4 ps-lg-0 pe-md-5 pe-lg-0">
+          <div class="row align-items-center py-sm-2">
+
+            <!-- Parallax gfx -->
+            <div class="col-md-7 col-lg-6 offset-xl-1">
+              <div class="position-relative mx-auto mb-5 m-md-0" style="max-width: 526px;">
+                <img src="{{ asset('compro/assets/img/landing/saas-2/device.png') }}" class="d-block" alt="Device">
+                <div class="rellax d-block position-absolute top-0 end-0 w-100 mt-md-4 me-md-n5" alt="App Screen" data-rellax-percentage="0.5" data-rellax-vertical-scroll-axis="xy" data-rellax-horizontal-speed="0.6" data-rellax-vertical-speed="-0.6" data-disable-parallax-down="md">
+                  <img src="{{ asset('compro/assets/img/landing/saas-2/screen.png') }}">
+                </div>
+              </div>
+            </div>
+
+            <!-- Text + Download buttons -->
+            <div class="col-xl-4 col-md-5 mt-n2 mt-md-0">
+              <h2 class="h1 text-center text-md-start mb-4 mb-lg-5">Download Our App for Any Devices:</h2>
+              <div class="row">
+                <div class="col-sm-6 col-md-12 pb-4 pb-sm-0">
+                  <div class="row row-cols-1 row-cols-lg-2 align-items-end text-center text-md-start pb-md-4 mb-lg-3">
+                    <div class="col mb-3 mb-lg-0">
+                      <p class="text-muted mb-1">App Store</p>
+                      <div class="text-nowrap fs-sm pb-lg-1 mb-2">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                      </div>
+                      <h3 class="h4 mb-1">Editor's Choice</h3>
+                      <p class="mb-0">rating 4.7, 187K+ reviews</p>
+                    </div>
+                    <div class="col d-lg-flex justify-content-end">
+                      <a href="#" class="btn btn-dark btn-lg px-3 py-2">
+                        <img src="{{ asset('compro/assets/img/market/appstore-light.svg') }}" class="light-mode-img" width="124" alt="App Store">
+                        <img src="{{ asset('compro/assets/img/market/appstore-dark.svg') }}" class="dark-mode-img" width="124" alt="App Store">
+                      </a>        
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-12">
+                  <div class="row row-cols-1 row-cols-lg-2 align-items-end text-center text-md-start">
+                    <div class="col mb-3 mb-lg-0">
+                      <p class="text-muted mb-1">Google Play</p>
+                      <div class="text-nowrap fs-sm pb-lg-1 mb-2">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                      </div>
+                      <h3 class="h4 mb-1">App of the Day</h3>
+                      <p class="mb-0">rating 4.8, 30K+ reviews</p>
+                    </div>
+                    <div class="col d-lg-flex justify-content-end">
+                      <a href="#" class="btn btn-dark btn-lg px-3 py-2">
+                        <img src="{{ asset('compro/assets/img/market/googleplay-light.svg') }}" class="light-mode-img" width="139" alt="Google Play">
+                        <img src="{{ asset('compro/assets/img/market/googleplay-dark.svg') }}" class="dark-mode-img" width="139" alt="Google Play">
+                      </a>               
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Pricing -->
+      <section class="container pt-5">
+        <div class="row justify-content-center text-center pt-2 pt-md-4 pt-lg-5 pb-4 pb-lg-5 mb-1">
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11 pt-xl-3">
+            <h2 class="h1 mb-lg-4">Transparent Pricing for You</h2>
+            <p class="fs-lg text-muted mb-0">Varius sed maecenas massa dictum viverra in. Viverra vel in elit, vivamus dui interdum. Nulla congue lobortis amet amet eleifend.</p>
+          </div>
+        </div>
+        <div class="table-responsive-lg">
+          <div class="d-flex align-items-center pb-4">
+        
+            <!-- Pricing plan -->
+            <div class="bg-primary rounded-3 shadow-primary p-4" style="width: 36%; min-width: 18rem;">
+              <div class="card bg-transparent border-light py-3 py-sm-4 py-lg-5">
+                <div class="card-body text-light text-center">
+                  <h3 class="text-light mb-2">Team</h3>
+                  <div class="fs-lg opacity-70 pb-4 mb-3">Best for small teams</div>
+                  <div class="display-5 mb-1">$10</div>
+                  <div class="opacity-50 mb-5">per month</div>
+                </div>
+                <div class="card-footer border-0 text-center pt-0 pb-4">
+                  <a href="#" class="btn btn-light btn-lg shadow-secondary">Get started now</a>
+                </div>
+              </div>
+            </div>
+            <div class="row flex-nowrap border rounded-3 rounded-start-0 shadow-sm g-0" style="width: 64%; min-width: 32rem;">
+        
+              <!-- Pricing plan -->
+              <div class="col">
+                <div class="card bg-light h-100 border-0 border-end rounded-0 py-3 py-sm-4 py-lg-5">
+                  <div class="card-body text-center">
+                    <h3 class="mb-2">Company</h3>
+                    <div class="fs-lg pb-4 mb-3">Best for growing teams</div>
+                    <div class="display-5 text-dark mb-1">$25</div>
+                    <div class="text-muted mb-5">per month</div>
+                  </div>
+                  <div class="card-footer border-0 text-center pt-0 pb-4">
+                    <a href="#" class="btn btn-outline-primary btn-lg">Get started now</a>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Pricing plan -->
+              <div class="col">
+                <div class="card bg-light h-100 border-0 rounded-start-0 py-3 py-sm-4 py-lg-5">
+                  <div class="card-body text-center">
+                    <h3 class="mb-2">Enterprise</h3>
+                    <div class="fs-lg pb-4 mb-3">Best for large teams</div>
+                    <div class="display-5 text-dark mb-1">$50</div>
+                    <div class="text-muted mb-5">per month</div>
+                  </div>
+                  <div class="card-footer border-0 text-center pt-0 pb-4">
+                    <a href="#" class="btn btn-outline-primary btn-lg">Get started now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Integrations -->
+      <section class="container mt-n1 mt-md-0 py-5">
+        <div class="row justify-content-center text-center pt-md-3 pb-4 py-lg-5 mb-1">
+          <div class="col-xl-8 col-lg-9 col-md-10">
+            <h2 class="h1 mb-lg-4">Integrate Top Work Tools</h2>
+            <p class="fs-lg text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3 g-lg-4 pb-md-3 pb-lg-5">
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/google.svg') }}" class="d-block mb-4" width="56" alt="Google">
+              <p class="mb-0">Lorem magnis pretium sed curabitur nunc facilisi nunc cursus sagittis pretium.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/zoom.svg') }}" class="d-block mb-4" width="56" alt="Zoom">
+              <p class="mb-0">In eget a mauris quis. Tortor dui tempus quis integer est sit natoque placerat dolor.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/slack.svg') }}" class="d-block mb-4" width="56" alt="Slack">
+              <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/gmail.svg') }}" class="d-block mb-4" width="56" alt="Gmail">
+              <p class="mb-0">Rutrum interdum tortor, sed at nulla. A cursus bibendum elit purus cras praesent.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/trello.svg') }}" class="d-block mb-4" width="56" alt="Trello">
+              <p class="mb-0">Congue pellentesque amet, viverra curabitur quam diam scelerisque fermentum urna.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/mailchimp.svg') }}" class="d-block mb-4" width="56" alt="Mailchimp">
+              <p class="mb-0">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris integer.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/dropbox.svg') }}" class="d-block mb-4" width="56" alt="Dropbox">
+              <p class="mb-0">Ut in turpis consequat odio diam lectus elementum. Est faucibus blandit platea.</p>
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-body card-hover bg-light border-0">
+              <img src="{{ asset('compro/assets/img/brands/evernote.svg') }}" class="d-block mb-4" width="56" alt="Evernote">
+              <p class="mb-0">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CTA -->
+      <section class="bg-secondary py-5">
+        <div class="container text-center py-1 py-md-4 py-lg-5">
+          <h2 class="h1 mb-4">Ready to Get Started?</h2>
+          <p class="lead pb-3 mb-3">Organize your tasks with a 14-day free trial</p>
+          <a href="#" class="btn btn-primary shadow-primary btn-lg mb-1">Get started</a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark dark-mode pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <img src="{{ asset('compro/assets/img/logo.svg') }}" class="me-2" width="60" alt="Silicon">
+          <span class="fs-4">Silicon</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-4 mb-3">
+            <img src="{{ asset('compro/assets/img/market/appstore-light.svg') }}" class="light-mode-img" width="124" alt="App Store">
+            <img src="{{ asset('compro/assets/img/market/appstore-dark.svg') }}" class="dark-mode-img" width="124" alt="App Store">
+          </a>
+          <a href="#" class="btn btn-dark btn-lg px-3 py-2 mb-3">
+            <img src="{{ asset('compro/assets/img/market/googleplay-light.svg') }}" class="light-mode-img" width="139" alt="Google Play">
+            <img src="{{ asset('compro/assets/img/market/googleplay-dark.svg') }}" class="dark-mode-img" width="139" alt="Google Play">
+          </a>
+        </div>
+        <div class="d-flex justify-content-center pt-4 mt-lg-3">
+          <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-twitter mx-2">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <p class="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="text-light opacity-60">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="{{ asset('compro/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('compro/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+    <script src="{{ asset('compro/assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js') }}"></script>
+    <script src="{{ asset('compro/assets/vendor/rellax/rellax.min.js') }}"></script>
+    <script src="{{ asset('compro/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('compro/assets/vendor/img-comparison-slider/dist/index.js') }}"></script>
+
+    <!-- Main Theme Script -->
+    <script src="{{ asset('compro/assets/js/theme.min.js') }}"></script>
+  </body>
+
+<!-- Mirrored from silicon.createx.studio/landing-saas-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Aug 2022 19:37:23 GMT -->
 </html>

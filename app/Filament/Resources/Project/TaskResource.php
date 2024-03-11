@@ -31,6 +31,8 @@ class TaskResource extends Resource
                     Forms\Components\Select::make('project_management_id')->relationship(name: 'project', titleAttribute: 'name')->options(\App\Models\Project\ProjectManagement::all()->pluck('name', 'id'))->required(),
                     Forms\Components\Select::make('assignto')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
                     Forms\Components\TextInput::make('progress')->numeric()->required(),
+                    Forms\Components\DatePicker::make('start_date')->required(),
+                    Forms\Components\DatePicker::make('due_date')->required(),
                     Forms\Components\RichEditor::make('description')->toolbarButtons([
                         'attachFiles',
                         'blockquote',

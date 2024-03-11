@@ -18,6 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('assignto')->foreign('assignto')->references('id')->on('users')->onDelete('cascade');
             $table->text('description', 'longtext');
             $table->decimal('progress', 8, 2);
+            $table->date('start_date');
+            $table->date('due_date');
             $table->timestamps();
         });
     }

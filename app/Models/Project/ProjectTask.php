@@ -15,6 +15,8 @@ class ProjectTask extends Model
         'assignto',
         'description',
         'progress',
+        'start_date',
+        'due_date',
     ];
     public function createdByUser(): BelongsTo {
         return $this->belongsTo(\App\Models\User::class, 'createdby', 'id');

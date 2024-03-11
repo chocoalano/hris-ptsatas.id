@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Widgets\TaskOrders;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -42,6 +43,7 @@ class AdminPanelProvider extends PanelProvider
                 \App\Filament\Widgets\ProjectChart::class,
                 \App\Filament\Widgets\ProjectStatsOverview::class,
                 \App\Filament\Widgets\CustomerChart::class,
+                TaskOrders::class
             ])
             ->sidebarCollapsibleOnDesktop()
             // ->topNavigation()
