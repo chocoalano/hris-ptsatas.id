@@ -25,16 +25,10 @@ class BranchResource extends Resource
         return $form
             ->schema([
                 Section::make('Branch Company Setup')
-                ->description('The data added here will be displayed on several forms')
-                ->columns([
-                    'sm' => 2,
-                    'xl' => 2,
-                    '2xl' => 2,
-                ])
-                ->schema([
+                ->description('The data added here will be displayed on several forms')->columns([ 'sm' => 1, 'xl' => 2, '2xl' => 2,])->schema([
                     Forms\Components\Select::make('company_id')->relationship(name: 'company', titleAttribute: 'name')->label('Select Company Setup')->options(\App\Models\Master\Company::all()->pluck('name', 'id')),
                     Forms\Components\TextInput::make('name'),
-                    Forms\Components\Textarea::make('address')->columnSpan(2),
+                    Forms\Components\Textarea::make('address')->columnSpan('full'),
                     Forms\Components\TextInput::make('latitude'),
                     Forms\Components\TextInput::make('longitude'),
                 ])

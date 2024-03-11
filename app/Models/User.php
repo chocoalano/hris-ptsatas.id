@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class User extends Authenticatable
 {
@@ -46,6 +48,10 @@ class User extends Authenticatable
     }
     public function emp(): HasOne {
         return $this->hasOne(\App\Models\User\UserEmployment::class, 'user_id', 'id');
+    }
+    public function empCompany(): BelongsTo
+    {
+        return $this->belongsTo(\App\Models\User\UserEmployment::class, 'id', 'user_id');
     }
     public function emergency_contact(): HasOne {
         return $this->hasOne(\App\Models\User\UserEmergencyContact::class, 'user_id', 'id');

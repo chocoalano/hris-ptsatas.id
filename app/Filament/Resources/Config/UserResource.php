@@ -44,22 +44,6 @@ class UserResource extends Resource
                             Infolists\Components\TextEntry::make('recidential_address')->color('primary')->columnSpan(2),
                         ])
                     ]),
-                    Infolists\Components\Tabs\Tab::make('Employment')->schema([
-                        Infolists\Components\Section::make()->columns(['sm' => 3, 'xl' => 4, '2xl' => 4])->relationship('emp')->schema([
-                            Infolists\Components\TextEntry::make('company')->color('primary'),
-                            Infolists\Components\TextEntry::make('organization')->color('primary'),
-                            Infolists\Components\TextEntry::make('job_position')->color('primary'),
-                            Infolists\Components\TextEntry::make('job_level')->color('primary'),
-                            Infolists\Components\TextEntry::make('employment_status')->color('primary'),
-                            Infolists\Components\TextEntry::make('branch')->color('primary'),
-                            Infolists\Components\TextEntry::make('join_date')->color('primary'),
-                            Infolists\Components\TextEntry::make('sign_date')->color('primary'),
-                            Infolists\Components\TextEntry::make('grade')->color('primary'),
-                            Infolists\Components\TextEntry::make('class')->color('primary'),
-                            Infolists\Components\TextEntry::make('approval_line')->color('primary'),
-                            Infolists\Components\TextEntry::make('approval_manager')->color('primary'),
-                        ])
-                    ]),
                     Infolists\Components\Tabs\Tab::make('Emergency Contact')->schema([
                         Infolists\Components\Section::make()->columns(['sm' => 3, 'xl' => 4, '2xl' => 4])->relationship('emergency_contact')->schema([
                             Infolists\Components\TextEntry::make('name')->color('primary'),
@@ -95,120 +79,126 @@ class UserResource extends Resource
                 Forms\Components\Grid::make(1)
                 ->schema([
                     Forms\Components\Wizard::make([
-                        Forms\Components\Wizard\Step::make('Person')->schema([
-                            Forms\Components\Grid::make(4)->schema([
-                                Forms\Components\TextInput::make('name')->suffixIcon('heroicon-m-user-circle')->required(),
-                                Forms\Components\Select::make('role_id')->relationship(name: 'role', titleAttribute: 'name')->label('Role User')->options(\App\Models\Config\Role::all()->pluck('name', 'id'))->suffixIcon('heroicon-m-rectangle-group')->searchable()->required(),
-                                Forms\Components\TextInput::make('email')->suffixIcon('heroicon-m-envelope')->required()->email(),
-                                Forms\Components\TextInput::make('mobile_phone')->suffixIcon('heroicon-m-device-phone-mobile')->numeric()->required(),
-                                Forms\Components\TextInput::make('phone')->suffixIcon('heroicon-m-phone')->numeric()->required(),
-                                Forms\Components\TextInput::make('placebirth')->suffixIcon('heroicon-m-map-pin')->required(),
-                                Forms\Components\DatePicker::make('birthdate')->suffixIcon('heroicon-m-calendar-days')->required(),
-                                Forms\Components\Radio::make('gender')->label('Chosed gender?')->options([
-                                    'male' => 'Male',
-                                    'female' => 'Female'
-                                ])->inline()->required(),
-                                Forms\Components\Select::make('religion')->options([
-                                    'Catholic'=>'Catholic',
-                                    'Islam'=>'Islam',
-                                    'Christian'=>'Christian',
-                                    'Buddha'=>'Buddha',
-                                    'Hindu'=>'Hindu',
-                                    'Confucius'=>'Confucius',
-                                    'Others'=>'Others'
-                                ])->required(),
-                                Forms\Components\TextInput::make('password')->password()->required(),
-                                Forms\Components\Select::make('identity_address')->options([
-                                    'KTP'=>'KTP',
-                                    'Passport'=>'Passport',
-                                ])->required(),
-                                Forms\Components\TextInput::make('identity_numbers')->required()->numeric(),
-                                Forms\Components\DatePicker::make('identity_expired')->required(),
-                                Forms\Components\TextInput::make('postal_code')->numeric()->required(),
-                                Forms\Components\Textarea::make('citizen_idaddress')->columnSpan(2)->required(),
-                                Forms\Components\Textarea::make('recidential_address')->columnSpan(2)->required()
-                            ])
-                        ]),
-                        Forms\Components\Wizard\Step::make('Employment')->schema([
-                            Forms\Components\Grid::make(4)->schema([
-                                Forms\Components\Select::make('emp.company')->options(\App\Models\Master\Company::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.organization')->options(\App\Models\Master\Organization::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.job_position')->options(\App\Models\Master\JobPosition::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.job_level')->options([
-                                    'Helper'=>'Helper',
-                                    'Operator'=>'Operator',
-                                    'Staff'=>'Staff',
-                                    'Supervisor'=>'Supervisor',
-                                    'Senior'=>'Senior',
-                                    'Assistant manager'=>'Assistant manager',
-                                    'Manager'=>'Manager',
-                                    'General Manager'=>'General Manager',
-                                    'Direktur'=>'Direktur',
-                                ])->required(),
-                                Forms\Components\Select::make('emp.employment_status')->options([
-                                    'Daily release'=>'Daily release',
-                                    'Probation'=>'Probation',
-                                    'Contract'=>'Contract',
-                                    'Permanent'=>'Permanent',
-                                ])->required(),
-                                Forms\Components\Select::make('emp.branch')->options(\App\Models\Master\Branch::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\DatePicker::make('emp.join_date')->required(),
-                                Forms\Components\DatePicker::make('emp.sign_date')->required(),
-                                Forms\Components\Select::make('emp.grade')->options(\App\Models\Master\Grade::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.class')->options(\App\Models\Master\ClassEmp::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.approval_line')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
-                                Forms\Components\Select::make('emp.approval_manager')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
-                            ])
-                        ]),
-                        Forms\Components\Wizard\Step::make('Family')->schema([
-                            Forms\Components\Repeater::make('family')->schema([
-                                Forms\Components\Grid::make(4)->schema([
-                                    Forms\Components\TextInput::make('name')->label('Fullname')->suffixIcon('heroicon-m-user-circle')->required(),
-                                    Forms\Components\Select::make('relationship')->options([
-                                        'momy' => 'Momy',
-                                        'dady' => 'Dady',
-                                        'brother' => 'Brother',
-                                        'sister' => 'Sister',
-                                        'wife' => 'Wife',
-                                        'daughter' => 'Daughter',
-                                        'boy' => 'Boy',
+                        Forms\Components\Wizard\Step::make('Person & Employment')->schema([
+                            Forms\Components\Split::make([
+                                Forms\Components\Section::make('Persons')->columns([ 'sm' => 1, 'xl' => 2, '2xl' => 2,])->schema([
+                                    Forms\Components\TextInput::make('name')->required(),
+                                    Forms\Components\Select::make('role_id')->relationship(name: 'role', titleAttribute: 'name')->label('Role User')->options(\App\Models\Config\Role::all()->pluck('name', 'id'))->searchable()->required(),
+                                    Forms\Components\TextInput::make('email')->email()->required(),
+                                    Forms\Components\DatePicker::make('email_verified_at')->required(),
+                                    Forms\Components\TextInput::make('mobile_phone')->numeric()->required(),
+                                    Forms\Components\TextInput::make('phone')->numeric()->required(),
+                                    Forms\Components\TextInput::make('placebirth')->required(),
+                                    Forms\Components\DatePicker::make('birthdate')->required(),
+                                    Forms\Components\Radio::make('gender')->label('Chosed gender?')->options([
+                                        'male' => 'Male',
+                                        'female' => 'Female'
+                                    ])->inline()->required(),
+                                    Forms\Components\Radio::make('bloodtype')->label('Chosed blood type?')->options([
+                                        'A'=>'A', 'B'=>'B', 'AB'=>'AB', 'O'=>'O'
+                                    ])->inline()->required(),
+                                    Forms\Components\Select::make('religion')->options([
+                                        'Catholic'=>'Catholic',
+                                        'Islam'=>'Islam',
+                                        'Christian'=>'Christian',
+                                        'Buddha'=>'Buddha',
+                                        'Hindu'=>'Hindu',
+                                        'Confucius'=>'Confucius',
+                                        'Others'=>'Others'
                                     ])->required(),
-                                    Forms\Components\Select::make('activity')->options([
-                                        'worker' => 'Worker',
-                                        'housewife' => 'Housewife',
-                                        'study' => 'Study',
+                                    Forms\Components\TextInput::make('password')->password(),
+                                    Forms\Components\Select::make('identity_address')->options([
+                                        'KTP'=>'KTP',
+                                        'Passport'=>'Passport',
                                     ])->required(),
-                                    Forms\Components\TextInput::make('age')->label('Age')->numeric()->required()
-                                ])
-                            ])->cloneable()
+                                    Forms\Components\TextInput::make('identity_numbers')->numeric()->required(),
+                                    Forms\Components\DatePicker::make('identity_expired')->required(),
+                                    Forms\Components\TextInput::make('postal_code')->numeric()->required(),
+                                    Forms\Components\Textarea::make('citizen_idaddress')->columnSpan('full')->required(),
+                                    Forms\Components\Textarea::make('recidential_address')->columnSpan('full')->required()
+                                ]),
+                                Forms\Components\Section::make('Employment')->schema([
+                                    Forms\Components\Select::make('emp.company')->options(\App\Models\Master\Company::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.organization')->options(\App\Models\Master\Organization::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.job_position')->options(\App\Models\Master\JobPosition::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.job_level')->options([
+                                        'Helper'=>'Helper',
+                                        'Operator'=>'Operator',
+                                        'Staff'=>'Staff',
+                                        'Supervisor'=>'Supervisor',
+                                        'Senior'=>'Senior',
+                                        'Assistant manager'=>'Assistant manager',
+                                        'Manager'=>'Manager',
+                                        'General Manager'=>'General Manager',
+                                        'Direktur'=>'Direktur',
+                                    ])->required(),
+                                    Forms\Components\Select::make('emp.employment_status')->options([
+                                        'Daily release'=>'Daily release',
+                                        'Probation'=>'Probation',
+                                        'Contract'=>'Contract',
+                                        'Permanent'=>'Permanent',
+                                    ])->required(),
+                                    Forms\Components\Select::make('emp.branch')->options(\App\Models\Master\Branch::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\DatePicker::make('emp.join_date')->required(),
+                                    Forms\Components\DatePicker::make('emp.sign_date')->required(),
+                                    Forms\Components\Select::make('emp.grade')->options(\App\Models\Master\Grade::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.class')->options(\App\Models\Master\ClassEmp::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.approval_line')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
+                                    Forms\Components\Select::make('emp.approval_manager')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
+                                ])->grow(false),
+                            ])->from('md'),
+                        ]),
+                        Forms\Components\Wizard\Step::make('Family & Education')->schema([
+                            Forms\Components\Section::make('Family')->columns([ 'sm' => 1, 'xl' => 1, '2xl' => 1,])->schema([
+                                Forms\Components\Repeater::make('family')->schema([
+                                    Forms\Components\Grid::make(4)->schema([
+                                        Forms\Components\TextInput::make('name')->label('Fullname')->required(),
+                                        Forms\Components\Select::make('relationship')->options([
+                                            'momy' => 'Momy',
+                                            'dady' => 'Dady',
+                                            'brother' => 'Brother',
+                                            'sister' => 'Sister',
+                                            'wife' => 'Wife',
+                                            'daughter' => 'Daughter',
+                                            'boy' => 'Boy',
+                                        ])->required(),
+                                        Forms\Components\Select::make('activity')->options([
+                                            'worker' => 'Worker',
+                                            'housewife' => 'Housewife',
+                                            'study' => 'Study',
+                                        ])->required(),
+                                        Forms\Components\TextInput::make('age')->label('Age')->numeric()->required()
+                                    ])
+                                ])->cloneable()
+                            ]),
+                            Forms\Components\Section::make('Education')->columns([ 'sm' => 1, 'xl' => 1, '2xl' => 1,])->schema([
+                                Forms\Components\Repeater::make('education')->schema([
+                                    Forms\Components\Grid::make(5)->schema([
+                                        Forms\Components\TextInput::make('agency')->label('Agency name')->required(),
+                                        Forms\Components\Select::make('level')->options([
+                                            'sd' => 'SD',
+                                            'smp' => 'SMP',
+                                            'slta' => 'SM(A/K/U)/Sederajat',
+                                            's1' => 'S1',
+                                            's2' => 'S2',
+                                            's3' => 'S3',
+                                        ])->alpha()->required(),
+                                        Forms\Components\Select::make('status')->options([
+                                            'passed' => 'Passed',
+                                            'unpassed' => 'Unpassed',
+                                        ])->alpha()->required(),
+                                        Forms\Components\DatePicker::make('start')->native(false)->required(),
+                                        Forms\Components\DatePicker::make('finish')->native(false)->required()
+                                    ])
+                                ])->cloneable()
+                            ])
                         ]),
                         Forms\Components\Wizard\Step::make('Emergency Contact')->schema([
                             Forms\Components\Grid::make(3)->schema([
-                                Forms\Components\TextInput::make('ec.name')->label('Fullname')->required()->alpha(),
-                                Forms\Components\TextInput::make('ec.relationship')->label('Relationship')->required()->alpha(),
+                                Forms\Components\TextInput::make('ec.name')->label('Fullname')->alpha()->required(),
+                                Forms\Components\TextInput::make('ec.relationship')->label('Relationship')->alpha()->required(),
                                 Forms\Components\TextInput::make('ec.phone')->label('Phone numbers')->numeric()->required()
                             ])
-                        ]),
-                        Forms\Components\Wizard\Step::make('Education')->schema([
-                            Forms\Components\Repeater::make('education')->schema([
-                                Forms\Components\Grid::make(5)->schema([
-                                    Forms\Components\TextInput::make('agency')->label('Agency name')->required(),
-                                    Forms\Components\Select::make('level')->options([
-                                        'sd' => 'SD',
-                                        'smp' => 'SMP',
-                                        'slta' => 'SM(A/K/U)/Sederajat',
-                                        's1' => 'S1',
-                                        's2' => 'S2',
-                                        's3' => 'S3',
-                                    ])->required()->alpha(),
-                                    Forms\Components\Select::make('status')->options([
-                                        'passed' => 'Passed',
-                                        'unpassed' => 'Unpassed',
-                                    ])->required()->alpha(),
-                                    Forms\Components\DatePicker::make('start')->native(false)->required(),
-                                    Forms\Components\DatePicker::make('finish')->native(false)->required()
-                                ])
-                            ])->cloneable()        
                         ]),
                     ])
                 ])
@@ -271,6 +261,7 @@ class UserResource extends Resource
     {
         return [
             RelationManagers\RoleRelationManager::class,
+            RelationManagers\EmpCompanyRelationManager::class,
         ];
     }
 

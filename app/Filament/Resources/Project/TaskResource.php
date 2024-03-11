@@ -25,12 +25,9 @@ class TaskResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Project Task Assignment')->description('Add anyone who will contribute')
-                ->columns([
-                    'sm' => 1,
-                    'xl' => 3,
-                    '2xl' => 3,
-                ])->schema([
+                Forms\Components\Section::make('Project Task Assignment')
+                ->description('Add anyone who will contribute')
+                ->columns([ 'sm' => 1, 'xl' => 3, '2xl' => 3,])->schema([
                     Forms\Components\Select::make('project_management_id')->relationship(name: 'project', titleAttribute: 'name')->options(\App\Models\Project\ProjectManagement::all()->pluck('name', 'id'))->required(),
                     Forms\Components\Select::make('assignto')->options(\App\Models\User::all()->pluck('name', 'id'))->required(),
                     Forms\Components\TextInput::make('progress')->numeric()->required(),
@@ -49,7 +46,7 @@ class TaskResource extends Resource
                         'strike',
                         'underline',
                         'undo',
-                    ])->columnSpan(3)->required(),
+                    ])->columnSpan('full')->required(),
                 ])
             ]);
     }

@@ -31,13 +31,10 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('Detail Project Created')->description('Make project details complete and clear!')
-                ->columns([
-                    'sm' => 3,
-                    'xl' => 4,
-                    '2xl' => 4,
-                ])->schema([
-                    TextInput::make('name')->columnSpan(4)->required(),
+                Section::make('Detail Project Created')
+                ->description('Make project details complete and clear!')
+                ->columns([ 'sm' => 1, 'xl' => 2, '2xl' => 2,])->schema([
+                    TextInput::make('name')->columnSpan('full')->required(),
                     RichEditor::make('overview')->toolbarButtons([
                         'attachFiles',
                         'blockquote',
@@ -53,7 +50,7 @@ class ProjectResource extends Resource
                         'strike',
                         'underline',
                         'undo',
-                    ])->columnSpan(4)->required(),
+                    ])->columnSpan('full')->required(),
                     TextInput::make('budget')->numeric()->required(),
                     DatePicker::make('start_date')->required(),
                     DatePicker::make('due_date')->required(),

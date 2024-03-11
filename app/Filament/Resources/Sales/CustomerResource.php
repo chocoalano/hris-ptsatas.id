@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Config;
+namespace App\Filament\Resources\Sales;
 
-use App\Filament\Resources\Config\RoleResource\Pages;
-use App\Filament\Resources\Config\RoleResource\RelationManagers;
-use App\Models\Config\Role;
+use App\Filament\Resources\Sales\CustomerResource\Pages;
+use App\Filament\Resources\Sales\CustomerResource\RelationManagers;
+use App\Models\Sales\Customer;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,12 +13,12 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class RoleResource extends Resource
+class CustomerResource extends Resource
 {
-    protected static ?string $model = Role::class;
-
-    protected static ?string $navigationLabel = 'Role Manage';
-    protected static ?string $navigationGroup = 'Config Application';
+    protected static ?string $model = Customer::class;
+    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationLabel = 'Customers List';
+    protected static ?string $navigationGroup = 'Project Management';
 
     public static function form(Form $form): Form
     {
@@ -44,15 +44,12 @@ class RoleResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('No.')->rowIndex(),
-                Tables\Columns\TextColumn::make('name')->searchable(),
-                Tables\Columns\TextColumn::make('description')->searchable()->limit(50),
+                //
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -72,10 +69,9 @@ class RoleResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRoles::route('/'),
-            'create' => Pages\CreateRole::route('/create'),
-            'view' => Pages\ViewRole::route('/{record}'),
-            'edit' => Pages\EditRole::route('/{record}/edit'),
+            'index' => Pages\ListCustomers::route('/'),
+            'create' => Pages\CreateCustomer::route('/create'),
+            'edit' => Pages\EditCustomer::route('/{record}/edit'),
         ];
     }
 }

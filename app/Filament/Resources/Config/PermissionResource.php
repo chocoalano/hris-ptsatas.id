@@ -24,17 +24,19 @@ class PermissionResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(20)->columnSpan(2),
-                Forms\Components\Textarea::make('description')->columnSpan(2),
-                Forms\Components\Select::make('roles')
-                    ->label('Give to roles')
-                    ->multiple()
-                    ->relationship(name: 'role', titleAttribute: 'name')
-                    ->required()
-                    ->options(\App\Models\Config\Role::all()->pluck('name', 'id'))
-                    ->loadingMessage('Loading...'),
+                Forms\Components\Section::make('Permission Forms')->columns([ 'sm' => 1, 'xl' => 2, '2xl' => 2,])->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required()
+                        ->maxLength(20),
+                    Forms\Components\Select::make('roles')
+                        ->label('Give to roles')
+                        ->multiple()
+                        ->relationship(name: 'role', titleAttribute: 'name')
+                        ->required()
+                        ->options(\App\Models\Config\Role::all()->pluck('name', 'id'))
+                        ->loadingMessage('Loading...'),
+                    Forms\Components\Textarea::make('description')->columnSpan('full'),
+                ])
             ]);
     }
 
