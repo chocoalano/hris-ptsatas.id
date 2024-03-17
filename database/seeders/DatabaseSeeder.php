@@ -38,42 +38,6 @@ class DatabaseSeeder extends Seeder
             'update User',
             'delete User',
 
-            'viewAny Branch',
-            'view Branch',
-            'create Branch',
-            'update Branch',
-            'delete Branch',
-
-            'viewAny ClassEmp',
-            'view ClassEmp',
-            'create ClassEmp',
-            'update ClassEmp',
-            'delete ClassEmp',
-
-            'viewAny Company',
-            'view Company',
-            'create Company',
-            'update Company',
-            'delete Company',
-
-            'viewAny Grade',
-            'view Grade',
-            'create Grade',
-            'update Grade',
-            'delete Grade',
-
-            'viewAny JobPosition',
-            'view JobPosition',
-            'create JobPosition',
-            'update JobPosition',
-            'delete JobPosition',
-
-            'viewAny Organization',
-            'view Organization',
-            'create Organization',
-            'update Organization',
-            'delete Organization',
-
             'viewAny Customer',
             'view Customer',
             'create Customer',
@@ -140,19 +104,7 @@ class DatabaseSeeder extends Seeder
                 'name'=>$key,
                 'email'=>$key.'@satas-erp.tes',
                 'password'=>bcrypt('123456'),
-                'mobile_phone'=>'8234872349',
                 'phone'=>'3253245423',
-                'placebirth'=>'lorem',
-                'birthdate'=>Date('Y-m-d'),
-                'gender'=>'male',
-                'bloodtype'=>'A',
-                'religion'=>'Islam',
-                'identity_address'=>'KTP',
-                'identity_numbers'=>'872349823473487',
-                'identity_expired'=>Date('Y-m-d'),
-                'postal_code'=>'234234',
-                'citizen_idaddress'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                'recidential_address'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             ]);
         }
         \App\Models\User::insert($insertUser);

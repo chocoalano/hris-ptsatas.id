@@ -11,16 +11,19 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TaskResource extends Resource
 {
     protected static ?string $model = ProjectTask::class;
 
     protected static ?string $navigationLabel = 'Project Task';
+    protected static ?string $navigationIcon = 'heroicon-o-puzzle-piece';
     protected static ?string $navigationGroup = 'Project Management';
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['progress', 'description'];
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -33,22 +36,7 @@ class TaskResource extends Resource
                     Forms\Components\TextInput::make('progress')->numeric()->required(),
                     Forms\Components\DatePicker::make('start_date')->required(),
                     Forms\Components\DatePicker::make('due_date')->required(),
-                    Forms\Components\RichEditor::make('description')->toolbarButtons([
-                        'attachFiles',
-                        'blockquote',
-                        'bold',
-                        'bulletList',
-                        'codeBlock',
-                        'h2',
-                        'h3',
-                        'italic',
-                        'link',
-                        'orderedList',
-                        'redo',
-                        'strike',
-                        'underline',
-                        'undo',
-                    ])->columnSpan('full')->required(),
+                    Forms\Components\RichEditor::make('description')->columnSpan('full')->required(),
                 ])
             ]);
     }
@@ -58,7 +46,7 @@ class TaskResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No.')->rowIndex(),
-                Tables\Columns\TextColumn::make('project.name')->limit(50)->searchable()->description(fn (ProjectTask $record): string => Str::limit($record->description, 50)),
+                Tables\Columns\TextColumn::make('project.name')->limit(50)->searchable(),
                 Tables\Columns\TextColumn::make('createdByUser.name')->searchable(),
                 Tables\Columns\TextColumn::make('asign.name')->searchable(),
                 Tables\Columns\TextColumn::make('progress')->numeric(decimalPlaces: 0)->formatStateUsing(fn (string $state): string => __("{$state}%"))->searchable(),

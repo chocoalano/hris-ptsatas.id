@@ -18,16 +18,14 @@ class AuthServiceProvider extends ServiceProvider
         \App\Models\Config\Permission::class => \App\Policies\PermissionPolicy::class,
         \App\Models\Config\Team::class => \App\Policies\TeamPolicy::class,
 
-        \App\Models\Master\Branch::class => \App\Policies\Master\BranchPolicy::class,
-        \App\Models\Master\ClassEmp::class => \App\Policies\Master\ClassEmpPolicy::class,
-        \App\Models\Master\Company::class => \App\Policies\Master\CompanyPolicy::class,
-        \App\Models\Master\Grade::class => \App\Policies\Master\GradePolicy::class,
-        \App\Models\Master\JobPosition::class => \App\Policies\Master\JobPositionPolicy::class,
-        \App\Models\Master\Organization::class => \App\Policies\Master\OrganizationPolicy::class,
-
         \App\Models\Project\ProjectManagement::class => \App\Policies\Project\ProjectListPolicy::class,
         \App\Models\Project\ProjectTask::class => \App\Policies\Project\ProjectTaskPolicy::class,
         \App\Models\Sales\Customer::class => \App\Policies\Project\CustomerPolicy::class,
+
+        \App\Models\Blogs\Post::class => \App\Policies\Blogs\PostPolicy::class,
+        \App\Models\Blogs\PostCategory::class => \App\Policies\Blogs\PostCategoryPolicy::class,
+
+        \App\Models\Assets\Document::class => \App\Policies\Asset\DocumentPolicy::class,
     ];
 
     /**

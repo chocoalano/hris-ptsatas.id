@@ -25,15 +25,18 @@ class AppServiceProvider extends ServiceProvider
             Filament::registerNavigationGroups([
                 NavigationGroup::make()
                     ->label('Config Application')
-                    ->icon('heroicon-s-wrench-screwdriver')
                     ->collapsed(),
                 NavigationGroup::make()
                     ->label('Master Data')
-                    ->icon('heroicon-s-table-cells')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Asset Management')
                     ->collapsed(),
                 NavigationGroup::make()
                     ->label('Project Management')
-                    ->icon('heroicon-s-presentation-chart-bar')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Blogs')
                     ->collapsed(),
             ]);
         });

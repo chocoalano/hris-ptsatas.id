@@ -20,6 +20,6 @@ class Customer extends Model
     ];
     public function userCreated(): BelongsTo
     {
-        return $this->belongsTo(\App\Models\User::class, 'id', 'createdby');
+        return $this->belongsTo(\App\Models\User::class, 'createdby', 'id');
     }
 }

@@ -18,8 +18,12 @@ class TeamResource extends Resource
     protected static ?string $model = Team::class;
 
     protected static ?string $navigationLabel = 'Teams Manage';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?string $navigationGroup = 'Config Application';
-
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'description', 'role.name'];
+    }
     public static function form(Form $form): Form
     {
         return $form

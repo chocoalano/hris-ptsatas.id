@@ -3,22 +3,24 @@
 namespace App\Filament\Resources\Config;
 
 use App\Filament\Resources\Config\PermissionResource\Pages;
-use App\Filament\Resources\Config\PermissionResource\RelationManagers;
 use App\Models\Config\Permission;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class PermissionResource extends Resource
 {
     protected static ?string $model = Permission::class;
 
     protected static ?string $navigationLabel = 'Permission Manage';
+    protected static ?string $navigationIcon = 'heroicon-o-lock-closed';
     protected static ?string $navigationGroup = 'Config Application';
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'description', 'role.name'];
+    }
 
     public static function form(Form $form): Form
     {

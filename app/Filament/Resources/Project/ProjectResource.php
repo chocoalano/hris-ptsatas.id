@@ -25,8 +25,12 @@ class ProjectResource extends Resource
     protected static ?string $model = ProjectManagement::class;
 
     protected static ?string $navigationLabel = 'Project List';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $navigationGroup = 'Project Management';
-
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'budget', 'start_date', 'due_date', 'overview', 'progress'];
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -67,7 +71,7 @@ class ProjectResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No.')->rowIndex(),
-                Tables\Columns\TextColumn::make('name')->limit(50)->searchable()->description(fn (ProjectManagement $record): string => Str::limit($record->overview, 50)),
+                Tables\Columns\TextColumn::make('name')->limit(50)->searchable(),
                 Tables\Columns\TextColumn::make('budget')->money('IDR')->searchable(),
                 Tables\Columns\TextColumn::make('start_date')->searchable(),
                 Tables\Columns\TextColumn::make('due_date')->searchable(),
