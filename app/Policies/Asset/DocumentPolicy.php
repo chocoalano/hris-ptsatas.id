@@ -7,42 +7,42 @@ use App\Models\User;
 class DocumentPolicy extends \App\Policies\Query
 {
     /**
-     * Determine whether the Customer can view any models.
+     * Determine whether the Document can view any models.
      */
     public function viewAny(User $user): bool
     {
-        return $this->cek($user->id, 'viewAny Customer');
+        return $this->cek($user->id, 'viewAny Document');
     }
 
     /**
-     * Determine whether the Customer can view the model.
+     * Determine whether the Document can view the model.
      */
     public function view(User $user): bool
     {
-        return $this->cek($user->id, 'view Customer');
+        return $this->cek($user->id, 'view Document');
     }
 
     /**
-     * Determine whether the Customer can create models.
+     * Determine whether the Document can create models.
      */
     public function create(User $user): bool
     {
-        return $this->cek($user->id, 'create Customer');
+        return $this->cek($user->id, 'create Document');
     }
 
     /**
-     * Determine whether the Customer can update the model.
+     * Determine whether the Document can update the model.
      */
     public function update(User $user): bool
     {
-        return $this->cek($user->id, 'update Customer');
+        return $this->cek($user->id, 'update Document');
     }
 
     /**
-     * Determine whether the Customer can delete the model.
+     * Determine whether the Document can delete the model.
      */
     public function delete(User $user): bool
     {
-        return $this->cek($user->id, 'delete Customer');
+        return $this->cek($user->id, 'delete Document');
     }
 }
