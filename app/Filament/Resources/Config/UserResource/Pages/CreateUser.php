@@ -13,14 +13,11 @@ class CreateUser extends CreateRecord
     protected static string $resource = UserResource::class;
     protected function handleRecordCreation(array $data): Model
     {
-        $u = static::getModel()::create([
-            'name'=>$data['name'],
-            'role_id'=>$data['role_id'],
-            'email'=>$data['email'],
-            'email_verified_at'=>$data['email_verified_at'],
-            'phone'=>$data['phone'],
-            'password'=>$data['password'],
-        ]);
+        if (!is_null($data['password']) || !is_null($data['email_verified_at'])) {
+            $data['password'] = bcrypt($data['password']);
+            $data['email_verified_at'] = $data['email_verified_at'] ?? null;
+        }
+        $u = static::getModel()::create($data);
         $recipient = auth()->user();
         Notification::make()
             ->title('Users data Saved successfully')
