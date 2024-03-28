@@ -25,7 +25,7 @@ class CreateTask extends CreateRecord
         $recipient = auth()->user();
         Notification::make()
             ->title('Project task data created successfully')
-            ->body('Created to the project=>'.ucfirst($p->name).' data have been created.')
+            ->body('Data have been created.')
             ->sendToDatabase($recipient)
             ->broadcast($recipient);
         return $u;

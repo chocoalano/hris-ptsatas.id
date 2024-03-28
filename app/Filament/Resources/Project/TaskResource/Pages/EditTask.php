@@ -25,7 +25,7 @@ class EditTask extends EditRecord
         $recipient = auth()->user();
         Notification::make()
             ->title('Project task data Saved successfully')
-            ->body('Changes to the name=>'.ucfirst($data['name']).' data have been saved.')
+            ->body('Data have been saved.')
             ->sendToDatabase($recipient)
             ->broadcast($recipient);
             return $record;
